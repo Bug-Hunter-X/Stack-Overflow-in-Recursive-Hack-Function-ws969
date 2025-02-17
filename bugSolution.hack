@@ -1,0 +1,13 @@
+function foo(x: int): int {
+  var result: int = 1;
+  for (var i = 1; i <= x; i++) {
+    result = result * i;
+  }
+  return result;
+}
+
+function main(): void {
+  echo foo(5);
+}
+
+This iterative version avoids the stack overflow by eliminating the recursive calls. The factorial is calculated using a loop instead, so the call stack doesn't grow indefinitely.
